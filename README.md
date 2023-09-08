@@ -1,1 +1,1 @@
-# wolfpack
+# WolfPack Protocol: Packet Management
