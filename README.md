@@ -1,7 +1,7 @@
 # WolfPackPacketHandler
 
 ## About
-This project provides a simple toolkit to manage the fictional WolfPack network protocol. Handle, verify, and work with packets seamlessly!
+This project offers a straightforward utility to manage the fictional WolfPack network protocol. Handle, verify, and work with packets seamlessly!
 
 ## Features
 - **Print Packet Details**: Quickly see packet content in a user-friendly format.
