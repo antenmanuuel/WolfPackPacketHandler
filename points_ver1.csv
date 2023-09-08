@@ -1,0 +1,65 @@
+base_output.packetize01,FAILED,0
+base_output.packetize02,FAILED,0
+base_output.print_packet01,PASSED,1
+base_output.reconstruct01,PASSED,5
+base_output.reconstruct02,PASSED,5
+base_output.reconstruct03,PASSED,5
+base_output.reconstruct04,PASSED,5
+base_return.checksum01,PASSED,1
+base_return.packetize01,FAILED,0
+base_return.packetize02,FAILED,0
+base_return.reconstruct01,PASSED,1
+base_return.reconstruct02,PASSED,1
+base_return.reconstruct03,PASSED,1
+base_return.reconstruct04,PASSED,1
+base_valgrind.packetize01,PASSED - NO CREDIT,0
+base_valgrind.packetize02,PASSED - NO CREDIT,0
+base_valgrind.reconstruct01,PASSED,1
+base_valgrind.reconstruct02,PASSED,1
+base_valgrind.reconstruct03,PASSED,1
+base_valgrind.reconstruct04,PASSED,1
+grading_output.packetize01,FAILED,0
+grading_output.packetize02,FAILED,0
+grading_output.packetize03,FAILED,0
+grading_output.packetize04,FAILED,0
+grading_output.packetize05,FAILED,0
+grading_output.packetize06,FAILED,0
+grading_output.print_packet01,PASSED,2
+grading_output.reconstruct01,PASSED,5
+grading_output.reconstruct02,PASSED,5
+grading_output.reconstruct03,PASSED,5
+grading_output.reconstruct04,PASSED,5
+grading_output.reconstruct05,PASSED,5
+grading_output.reconstruct06,PASSED,5
+grading_output.reconstruct07,PASSED,5
+grading_output.reconstruct08,PASSED,5
+grading_return.checksum01,PASSED,2
+grading_return.packetize01,FAILED,0
+grading_return.packetize02,FAILED,0
+grading_return.packetize03,FAILED,0
+grading_return.packetize04,FAILED,0
+grading_return.packetize05,FAILED,0
+grading_return.packetize06,FAILED,0
+grading_return.reconstruct01,PASSED,1
+grading_return.reconstruct02,PASSED,1
+grading_return.reconstruct03,PASSED,1
+grading_return.reconstruct04,PASSED,1
+grading_return.reconstruct05,PASSED,1
+grading_return.reconstruct06,PASSED,1
+grading_return.reconstruct07,PASSED,1
+grading_return.reconstruct08,PASSED,1
+grading_valgrind.packetize01,PASSED - NO CREDIT,0
+grading_valgrind.packetize02,PASSED - NO CREDIT,0
+grading_valgrind.packetize03,PASSED - NO CREDIT,0
+grading_valgrind.packetize04,PASSED - NO CREDIT,0
+grading_valgrind.packetize05,PASSED - NO CREDIT,0
+grading_valgrind.packetize06,PASSED - NO CREDIT,0
+grading_valgrind.reconstruct01,PASSED,1
+grading_valgrind.reconstruct02,PASSED,1
+grading_valgrind.reconstruct03,PASSED,1
+grading_valgrind.reconstruct04,PASSED,1
+grading_valgrind.reconstruct05,PASSED,1
+grading_valgrind.reconstruct06,PASSED,1
+grading_valgrind.reconstruct07,PASSED,1
+grading_valgrind.reconstruct08,PASSED,1
+TOTAL,,90

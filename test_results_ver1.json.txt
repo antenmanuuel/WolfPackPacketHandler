@@ -1,0 +1,453 @@
+{
+  "id": "Criterion v2.4.0",
+  "passed": 40,
+  "failed": 24,
+  "errored": 3,
+  "skipped": 0,
+  "test_suites": [
+    {
+      "name": "grading_valgrind",
+      "passed": 8,
+      "failed": 6,
+      "errored": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "reconstruct08",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct07",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct06",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct05",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct04",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct02",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct03",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct01",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "packetize06",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:55: Valgrind reported errors -- see tests.out/grading_packetize06.log"
+          ]
+        },
+        {
+          "name": "packetize05",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:55: Valgrind reported errors -- see tests.out/grading_packetize05.log"
+          ]
+        },
+        {
+          "name": "packetize04",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:55: Valgrind reported errors -- see tests.out/grading_packetize04.log"
+          ]
+        },
+        {
+          "name": "packetize03",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:55: Valgrind reported errors -- see tests.out/grading_packetize03.log"
+          ]
+        },
+        {
+          "name": "packetize02",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:55: Valgrind reported errors -- see tests.out/grading_packetize02.log"
+          ]
+        },
+        {
+          "name": "packetize01",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:55: Valgrind reported errors -- see tests.out/grading_packetize01.log"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "grading_return",
+      "passed": 9,
+      "failed": 6,
+      "errored": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "reconstruct08",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct07",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct06",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct05",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct04",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct03",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct02",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct01",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "packetize04",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:86: Return value was 0, but it should have been 1."
+          ]
+        },
+        {
+          "name": "packetize06",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:86: Return value was 0, but it should have been 5."
+          ]
+        },
+        {
+          "name": "packetize05",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:86: Return value was 0, but it should have been 2."
+          ]
+        },
+        {
+          "name": "packetize03",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:86: Return value was 0, but it should have been 1."
+          ]
+        },
+        {
+          "name": "packetize02",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:86: Return value was 0, but it should have been 1."
+          ]
+        },
+        {
+          "name": "checksum01",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "packetize01",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:86: Return value was 0, but it should have been 8."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "grading_output",
+      "passed": 9,
+      "failed": 6,
+      "errored": 2,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "reconstruct08",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct06",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct07",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct05",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct04",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct03",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct02",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct01",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "print_packet01",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "packetize06",
+          "assertions": 2,
+          "status": "ERRORED",
+          "messages": ["The test crashed."]
+        },
+        {
+          "name": "packetize05",
+          "assertions": 2,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:72: Contents of packet #1 incorrect. See unit_tests.c or grading_tests.c for expected packet contents.",
+            "../../../tests/unit_tests.c:72: Contents of packet #0 incorrect. See unit_tests.c or grading_tests.c for expected packet contents."
+          ]
+        },
+        {
+          "name": "packetize04",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:72: Contents of packet #0 incorrect. See unit_tests.c or grading_tests.c for expected packet contents."
+          ]
+        },
+        {
+          "name": "packetize03",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:72: Contents of packet #0 incorrect. See unit_tests.c or grading_tests.c for expected packet contents."
+          ]
+        },
+        {
+          "name": "packetize02",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:72: Contents of packet #0 incorrect. See unit_tests.c or grading_tests.c for expected packet contents."
+          ]
+        },
+        {
+          "name": "packetize01",
+          "assertions": 0,
+          "status": "ERRORED",
+          "messages": ["The test crashed."]
+        }
+      ]
+    },
+    {
+      "name": "base_valgrind",
+      "passed": 4,
+      "failed": 2,
+      "errored": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "reconstruct04",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct03",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct02",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct01",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "packetize02",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:55: Valgrind reported errors -- see tests.out/packetize02.log"
+          ]
+        },
+        {
+          "name": "packetize01",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:55: Valgrind reported errors -- see tests.out/packetize01.log"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "base_return",
+      "passed": 5,
+      "failed": 2,
+      "errored": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "reconstruct04",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct03",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct02",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct01",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "packetize02",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:86: Return value was 0, but it should have been 4."
+          ]
+        },
+        {
+          "name": "packetize01",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:86: Return value was 0, but it should have been 3."
+          ]
+        },
+        {
+          "name": "checksum01",
+          "assertions": 1,
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "name": "base_output",
+      "passed": 5,
+      "failed": 2,
+      "errored": 1,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "reconstruct04",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct03",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct02",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "reconstruct01",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "packetize02",
+          "assertions": 4,
+          "status": "FAILED",
+          "messages": [
+            "../../../tests/unit_tests.c:72: Contents of packet #3 incorrect. See unit_tests.c or grading_tests.c for expected packet contents.",
+            "../../../tests/unit_tests.c:72: Contents of packet #2 incorrect. See unit_tests.c or grading_tests.c for expected packet contents.",
+            "../../../tests/unit_tests.c:72: Contents of packet #1 incorrect. See unit_tests.c or grading_tests.c for expected packet contents.",
+            "../../../tests/unit_tests.c:72: Contents of packet #0 incorrect. See unit_tests.c or grading_tests.c for expected packet contents."
+          ]
+        },
+        {
+          "name": "print_packet01",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "packetize01",
+          "assertions": 0,
+          "status": "ERRORED",
+          "messages": ["The test crashed."]
+        }
+      ]
+    }
+  ]
+}
