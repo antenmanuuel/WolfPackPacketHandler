@@ -57,6 +57,7 @@ void print_packet_sf(const unsigned char *packet)
 unsigned int packetize_sf(const char *message, unsigned char *packets[], unsigned int packets_len, unsigned int max_payload,
                           unsigned long src_addr, unsigned long dest_addr, unsigned short flags)
 {
+    
     size_t messageLen = strlen(message);
 	unsigned int numPackets = (messageLen + max_payload - 1) / max_payload;
 	unsigned int headerSize = 24;
