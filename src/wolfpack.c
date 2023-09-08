@@ -54,101 +54,69 @@ void print_packet_sf(const unsigned char *packet)
     printf("\n");
 }
 
+
 unsigned int packetize_sf(const char *message, unsigned char *packets[], unsigned int packets_len, unsigned int max_payload,
-                          unsigned long src_addr, unsigned long dest_addr, unsigned short flags)
-{
+                          unsigned long src_addr, unsigned long dest_addr, unsigned short flags) {
     
     size_t messageLen = strlen(message);
-	unsigned int numPackets = (messageLen + max_payload - 1) / max_payload;
-	unsigned int headerSize = 24;
+    unsigned int numPackets = (messageLen + max_payload - 1) / max_payload;
+    unsigned int headerSize = 24;
 
-	if (numPackets > packets_len) {
-		numPackets = packets_len;
-		messageLen = numPackets * max_payload;
-	}
-	unsigned int payloadIdx = 0;
-	for (unsigned int i = 0; i < numPackets; i++) {
-		unsigned int payloadSize = max_payload;
-		if (payloadIdx + payloadSize > messageLen) {
-			payloadSize = messageLen - payloadIdx;
-		}
-		packets[i] = malloc(headerSize + payloadSize);
-		if (packets[i] == NULL) {
-			return i;
-		}
-        //srcAdd
+    if (numPackets > packets_len) {
+        numPackets = packets_len;
+        messageLen = numPackets * max_payload;
+    }
+
+    unsigned int payloadIdx = 0;
+    for (unsigned int i = 0; i < numPackets; i++) {
+        unsigned int payloadSize = (payloadIdx + max_payload > messageLen) ? (messageLen - payloadIdx) : max_payload;
+        
+        packets[i] = malloc(headerSize + payloadSize);
+        if (!packets[i]) return i;
+
         unsigned long tempSrcAddr = src_addr;
-        packets[i][4]=tempSrcAddr&0xff;
-        tempSrcAddr>>=8;
-        packets[i][3]=tempSrcAddr&0xff;
-        tempSrcAddr>>=8;
-        packets[i][2]=tempSrcAddr&0xff;
-        tempSrcAddr>>=8;
-        packets[i][1]=tempSrcAddr&0xff;
-        tempSrcAddr>>=8;
-        packets[i][0]=tempSrcAddr&0xff;
-        tempSrcAddr>>=8;
-    
-        //destAdd
-        unsigned long tempDestAddr = dest_addr;
-        packets[i][9]=tempDestAddr&0xff;
-        tempDestAddr>>=8;
-        packets[i][8]=tempDestAddr&0xff;
-        tempDestAddr>>=8;
-        packets[i][7]=tempDestAddr&0xff;
-        tempDestAddr>>=8;
-        packets[i][6]=tempDestAddr&0xff;
-        tempDestAddr>>=8;
-        packets[i][5]=tempDestAddr&0xff;
-        tempDestAddr>>=8;
-
-        //srcPort
-        packets[i][10]=32;
-
-        //destPort
-        packets[i][11]=64;
-
-        //fragOff
-        unsigned long tempIdx= payloadIdx;
-        packets[i][14]=tempIdx&0xff;
-        tempIdx>>=8;
-        packets[i][13]=tempIdx&0xff;
-        tempIdx>>=8;
-        packets[i][12]=tempIdx&0xff;;
-
-        //flag
-        unsigned int tempFlags = flags;
-        packets[i][16]=tempFlags&0xff;
-        tempFlags>>=8;
-        packets[i][15]=tempFlags&0xff;
-
-        //totalLength
-        unsigned long tempSize = payloadSize + headerSize;
-        packets[i][19]=tempSize&0xff;
-        tempSize>>=8;
-        packets[i][18]=tempSize&0xff;
-        tempSize>>=8;
-        packets[i][17]=tempSize&0xff;
-        tempSize>>=8;
-
-        //checksum
-        unsigned int tempChecksum = checksum_sf(packets[i]);
-        packets[i][23]=tempChecksum&0xff;
-        tempChecksum>>=8;
-        packets[i][22]=tempChecksum&0xff;
-        tempChecksum>>=8;
-        packets[i][21]=tempChecksum&0xff;
-        tempChecksum>>=8;
-        packets[i][20]=tempChecksum&0xff;
-        tempChecksum>>=8;
-
-		
-        for(unsigned int j =0;j<payloadSize;j++){
-            packets[i][headerSize + j] = message[payloadIdx+j];
+        for (int j = 4; j >= 0; j--) {
+            packets[i][j] = tempSrcAddr & 0xff;
+            tempSrcAddr >>= 8;
         }
-		payloadIdx += payloadSize;  
-	}
-	return numPackets;
+
+        unsigned long tempDestAddr = dest_addr;
+        for (int j = 9; j >= 5; j--) {
+            packets[i][j] = tempDestAddr & 0xff;
+            tempDestAddr >>= 8;
+        }
+
+        packets[i][10] = 32; // srcPort
+        packets[i][11] = 64; // destPort
+
+        unsigned long tempIdx = payloadIdx;
+        for (int j = 14; j >= 12; j--) {
+            packets[i][j] = tempIdx & 0xff;
+            tempIdx >>= 8;
+        }
+
+        unsigned short tempFlags = flags;
+        for (int j = 16; j >= 15; j--) {
+            packets[i][j] = tempFlags & 0xff;
+            tempFlags >>= 8;
+        }
+
+        unsigned long totalSize = payloadSize + headerSize;
+        for (int j = 19; j >= 17; j--) {
+            packets[i][j] = totalSize & 0xff;
+            totalSize >>= 8;
+        }
+
+        unsigned int tempChecksum = checksum_sf(packets[i]);
+        for (int j = 23; j >= 20; j--) {
+            packets[i][j] = tempChecksum & 0xff;
+            tempChecksum >>= 8;
+        }
+
+        memcpy(&packets[i][headerSize], &message[payloadIdx], payloadSize);
+        payloadIdx += payloadSize;
+    }
+    return numPackets;
 }
 
 
