@@ -13,7 +13,7 @@ This project offers a straightforward utility to manage the fictional WolfPack n
 1. Clone the repository: `git clone https://github.com/antenmanuuel/WolfPackPacketHandler.git`
 2. Navigate to the project folder: `cd WolfPackPacketHandler`
 3. Follow the instructions in `INSTALL.md` for setup.
-4. type `make` then `make test`
+4. type `make` then enter then `make test` and enter
 5. if you would like to add more test cases navigate to the projects folder: `cd WolfPackPacketHandler/tests`
 6. In the `WolfPackPacketHandler/tests` folder, open `unit_tests.c`
 7. In there you can add test cases by adding the required code for it 
