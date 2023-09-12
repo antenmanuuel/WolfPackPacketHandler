@@ -1,8 +1,3 @@
-/*
-DO NOT CHANGE THE CONTENTS OF THIS FILE IN CASE A NEW VERSION IS DISTRIBUTED.
-PUT YOUR OWN TEST CASES IN student_tests.c
-*/
-
 #include "unit_tests.h"
  
 static char test_log_outfile[100];
